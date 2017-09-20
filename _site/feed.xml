@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru_RU"><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ru_RU" /><updated>2017-09-20T19:08:13+04:00</updated><id>http://localhost:4000/</id><title type="html">Andrei Voronin Blog</title><subtitle>Frontend designer. He works hard behind the scenes pushing pixels, writing code and keeping users happy.
+</subtitle><author><name>Andrei Voronin</name></author><entry><title type="html">Базовые принципы проектирования</title><link href="http://localhost:4000/design-basic" rel="alternate" type="text/html" title="Базовые принципы проектирования" /><published>2017-08-10T18:00:00+04:00</published><updated>2017-08-10T18:00:00+04:00</updated><id>http://localhost:4000/design-basic</id><content type="html" xml:base="http://localhost:4000/design-basic">&lt;p&gt;Выполняя базовые принципы проектирования, дизайнеры взаимодействия и разработчики могут создавать системы, отвечающие ожиданиям человека. Такие системы люди будут считать естественными. Ниже представлен список принципов с характерными примерами.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-отзывчивость&quot;&gt;1. Отзывчивость&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Реакция должна быть мгновенной, независимо от сложности процесса и доступных ресурсов.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;закрытие-приложений-должно-быть-мгновенным-независимо-от-обстоятельств&quot;&gt;Закрытие приложений должно быть мгновенным, независимо от обстоятельств.&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: закрытие приложений во “взрослых” операционных системах.&lt;/strong&gt; Закрытие приложений на Windows/macOS/Linux происходит зачастую не сразу. Могут появляться уведомления о сохранение, о незаконченности действий. Приложение так же может просто подвиснуть.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/windows-app-close@2x.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: закрытие приложение в мобильных операционных системах.&lt;/strong&gt; Закрытие приложений на iOS/Android происходит сразу же при нажатии кнопки Home. На телефонах это критически необходимо, т. к. человека в любой момент может что-то отвлечь. Приложения на телефонах рассчитаны, что их в любой момент могут “убить”.&lt;/p&gt;
+
+&lt;iframe width=&quot;315&quot; height=&quot;560&quot; src=&quot;https://www.youtube.com/embed/Lk-3Ga7SZHU?autoplay=1&amp;amp;loop=1&amp;amp;mute=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; приложения должны быть рассчитаны, что их в любой момент могут закрыть. При закрытии приложение не должно делать никаких уведомлений и запросов у человека. Помнить, что “закрыть” ≠ “завершить работу приложения”. Сначала можно, и нужно, скрывать приложение. Затем в фоне делать необходимые действия: сохранения, оптимизации, обновления.&lt;/p&gt;
+
+&lt;h3 id=&quot;реакция-сетевых-приложений-должна-быть-мгновенной-и-позитивной&quot;&gt;Реакция сетевых приложений должна быть мгновенной и позитивной&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: переключение на следующее фото в Twitter.&lt;/strong&gt; При переключении на следующее фото нет никакой реакции. Непонятно: ты плохо нажал или фотография ещё грузится. Особенно это заметно при плохом интернете.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/feedback-twitter@2x.gif&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/feedback-twitter@2x.gif 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: Like в Facebook.&lt;/strong&gt; Если тебе понравилось сообщение, то ты можешь сразу поставить Like и увидеть при этом обратную реакцию, хотя сетевой запрос ещё не дошел до сервера. Интернета в этот момент может вообще не быть.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/feedback-facebook.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/feedback-facebook@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; сетевые приложения должны понимать, что интернет может быть плохой или его не может быть вовсе. И это не какой-то крайний случай, это обычная жизнь приложения. Сейчас у человека быстрый 4G, он заходит в метро, и у него 2G с задержками и потерей сетевых пакетов. У человека при этом не должен ухудшиться опыт использования приложения.&lt;/p&gt;
+
+&lt;h3 id=&quot;появление-контента-или-его-placeholderа-должно-быть-мгновенным&quot;&gt;Появление контента (или его placeholder’а) должно быть мгновенным&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: открытие приложения Twitter.&lt;/strong&gt; При открытии Twitter появляется анимированный экран загрузки — увеличивающаяся птица. В результате загрузка воспринимается дольше и нет ощущения, что приложение сразу же готово к использованию.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/open-twitter.webp&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: загрузка поста в Facebook.&lt;/strong&gt; При открытии Facebook появляется загрузка поста в примерном будущем его виде. Ты уже можешь подсознательно подготовиться понять расположение элементов на странице и подготовиться к чтению. Похожий эффект создаётся в прогрессивном JPEG, когда сначала показывается размытая картинка, а затем постепенно увеличивается её качество.&lt;/p&gt;
+
+&lt;div class=&quot;timeline-wrapper&quot;&gt;
+    &lt;div class=&quot;timeline-item&quot;&gt;
+        &lt;div class=&quot;animated-background facebook&quot;&gt;
+            &lt;div class=&quot;background-masker header-top&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker header-left&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker header-right&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker header-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker subheader-left&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker subheader-right&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker subheader-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-top&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-first-end&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-second-line&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-second-end&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-third-line&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;background-masker content-third-end&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    @-webkit-keyframes placeHolderShimmer{
+        0%{
+            background-position:-468px 0
+        }
+        100%{
+            background-position:468px 0
+        }
+    }
+
+    @keyframes placeHolderShimmer{
+        0%{
+            background-position:-468px 0
+        }
+        100%{
+            background-position:468px 0
+        }
+    }
+
+    .timeline-wrapper {
+        background-color: #e9eaed;
+        color: #141823;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin: 0 auto 1em;
+    }
+
+    .timeline-item {
+        background: #fff;
+        border: 1px solid;
+        border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+        border-radius: 3px;
+        padding: 12px;
+
+        margin: 0 auto;
+        max-width: 472px;
+        min-height: 200px;
+    }
+
+    .animated-background {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: placeHolderShimmer;
+        animation-name: placeHolderShimmer;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        background: #f6f7f8;
+        background: #eeeeee;
+        background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+        background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+        background: linear-gradient(to right,  #eeeeee 8%,#dddddd 18%,#eeeeee 33%);
+        -webkit-background-size: 800px 104px;
+        background-size: 800px 104px;
+        height: 96px;
+        position: relative;
+    }
+
+    .background-masker {
+        background: #fff;
+        position: absolute;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .outlined .background-masker {
+        border: 1px solid #ddd;
+    }
+
+
+    .outlined:hover .background-masker {
+        border: none;
+    }
+
+    .outlined:hover .background-masker:hover {
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    .background-masker.header-top,
+    .background-masker.header-bottom,
+    .background-masker.subheader-bottom {
+        top: 0;
+        left: 40px;
+        right: 0;
+        height: 10px;
+    }
+
+    .background-masker.header-left,
+    .background-masker.subheader-left,
+    .background-masker.header-right,
+    .background-masker.subheader-right {
+        top: 10px;
+        left: 40px;
+        height: 8px;
+        width: 10px;
+    }
+
+    .background-masker.header-bottom {
+        top: 18px;
+        height: 6px;
+    }
+
+    .background-masker.subheader-left,
+    .background-masker.subheader-right {
+        top: 24px;
+        height: 6px;
+    }
+
+
+    .background-masker.header-right,
+    .background-masker.subheader-right {
+        width: auto;
+        left: 300px;
+        right: 0;
+    }
+
+    .background-masker.subheader-right {
+        left: 230px;
+    }
+
+    .background-masker.subheader-bottom {
+        top: 30px;
+        height: 10px;
+    }
+
+    .background-masker.content-top,
+    .background-masker.content-second-line,
+    .background-masker.content-third-line,
+    .background-masker.content-second-end,
+    .background-masker.content-third-end,
+    .background-masker.content-first-end {
+        top: 40px;
+        left: 0;
+        right: 0;
+        height: 6px;
+    }
+
+    .background-masker.content-top {
+        height:20px;
+    }
+
+    .background-masker.content-first-end,
+    .background-masker.content-second-end,
+    .background-masker.content-third-end{
+        width: auto;
+        left: 380px;
+        right: 0;
+        top: 60px;
+        height: 8px;
+    }
+
+    .background-masker.content-second-line  {
+        top: 68px;
+    }
+
+    .background-masker.content-second-end {
+        left: 420px;
+        top: 74px;
+    }
+
+    .background-masker.content-third-line {
+        top: 82px;
+    }
+
+    .background-masker.content-third-end {
+        left: 300px;
+        top: 88px;
+    }
+&lt;/style&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; при загрузке сначала показывайте placeholder (образ) контента. В случае изображений подойдет JPEG с прогрессивной разверткой. Можно улучшить эффект, показав &lt;a href=&quot;https://jmperezperez.com/medium-image-progressive-loading-placeholder/&quot;&gt;маленькую размытую картинку&lt;/a&gt;. А в первое мгновение – блок, закрашенный &lt;a href=&quot;https://jmperezperez.com/medium-image-progressive-loading-placeholder/#Other-ways-of-improving-placeholders-Google-Images-Search&quot;&gt;ключевым цветом изображения&lt;/a&gt;. Для текста используйте placeholder, показывающий структуру сообщения, заменяя текст на серые полоски. Анимация поможет понять, что перед вами не окончательный контент. Для приложений не используйте экран загрузки для брендинга. Вместо него показывайте &lt;a href=&quot;https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/&quot;&gt;элементы управления первого экрана&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;итого-по-отзывчивости&quot;&gt;Итого по отзывчивости:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Отделяйте представление приложения от его логики. Визуальная часть приложения и его “работа” не должны быть связаны.&lt;/li&gt;
+  &lt;li&gt;Внезапное закрытие, отсутствие сети, нехватка ресурсов – это не крайний случай, а нормальная работа приложения.&lt;/li&gt;
+  &lt;li&gt;Если человек попросил что-то сделать, не нужно что-то спрашивать (Сохранить?) или уведомлять (OK?).&lt;/li&gt;
+  &lt;li&gt;Реакция в сетевых приложениях должна быть позитивной.&lt;/li&gt;
+  &lt;li&gt;Показывайте placeholder, пока контент не был получен. Сначала показывайте легкий контент “низкого” качества.&lt;/li&gt;
+  &lt;li&gt;Используйте предварительную загрузку содержимого. Будьте готовы, что человек нажмет на кнопки &lt;em&gt;Подробнее&lt;/em&gt;, &lt;em&gt;Следующая фотография&lt;/em&gt;, &lt;em&gt;Отправить&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-надежность&quot;&gt;2. Надежность&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Нельзя безвозвратно удалять данные человека, даже если человек прямо попросил это сделать.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;при-закрытии-нужно-сохранять-документ-всегда-независимо-от-действий-человека&quot;&gt;При закрытии нужно сохранять документ всегда, независимо от действий человека&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: сохранение в TextEdit.&lt;/strong&gt; При закрытии документа в простых текстовых редакторах задается вопрос о сохранении. И если человек случайно нажмёт &lt;em&gt;Не сохранять&lt;/em&gt;, то приложение спокойно удалит документ, который человек мог набирать весь день.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/save-textedit.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/save-textedit@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: сохранение в Google Docs.&lt;/strong&gt; При закрытии Google Docs, документ сохраняется всегда. Никаких запросов нет.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/save-googledocs.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/save-googledocs@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; сохраняйте данные, независимо от действий человека. Даже, если он явно сказал, что документ ему не нужен, в действительности он может ему понадобится через 5 минут.&lt;/p&gt;
+
+&lt;h3 id=&quot;сохранять-нужно-все-данные-полученные-от-человека&quot;&gt;Сохранять нужно все данные, полученные от человека&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: Прокрутка в Word Online.&lt;/strong&gt; При открытии документа в облачном офисном пакете от Microsoft не сохраняется место прошлого просмотра.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/scroll-word.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/scroll-word@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: прокрутка в Word 2013.&lt;/strong&gt; При открытии документа в десктопной версии Word 2013, он предлагает продолжить работу с места, где вы остановились в прошлый раз. При чем заметьте как аккуратно сделано: при закрытии приложение не спрашивает “Сохранить место просмотра?”, тихо сохраняет сам. При открытии так же тактично предлагает перейти к прошлому месту, не блокируя взаимодействие и не перекидывая автоматически.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/AM64bcBzdzg?autoplay=1&amp;amp;loop=1&amp;amp;mute=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; Сохраняйте не только основной документ, но и всю вспомогательную информацию, которая может помочь в будущем.&lt;/p&gt;
+
+&lt;h3 id=&quot;хранить-нужно-не-только-последнюю-версию-файла&quot;&gt;Хранить нужно не только последнюю версию файла&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: автоматическое сохранение в Notes.app.&lt;/strong&gt; Заметки всё сохраняют без вопросов – это замечательно. Но что, если ты удалил важный фрагмент и закрыл приложение? Тогда его будет уже не вернуть. Теряется надежность заметок в глазах человека. Даже обычную физическую записку ты можешь восстановить, достав её из корзины, что не скажешь про её цифровую версию.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/version-notesapp@2x.jpg&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/version-notesapp@2x.jpg 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: version history в Google Docs.&lt;/strong&gt; Google Docs хранит все версии документа. В любой момент можно вернуться к любой из них. Никаких специальных действий для версионирования делать не нужно.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/version-googledocs.gif&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; Хранить нужно не только последнюю версию файла, но и предыдущие. Предыдущие версии файла так же цены.&lt;/p&gt;
+
+&lt;h3 id=&quot;итого-по-надежности&quot;&gt;Итого по надежности&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Данные человека бесценны.&lt;/li&gt;
+  &lt;li&gt;Данные человека нужно сохранять все и всегда.&lt;/li&gt;
+  &lt;li&gt;Данные человека – это не только написанное сообщение или созданный файл, но любые информационные действия со его стороны: ввод в текстовое поле, выбранные пункты и опции, выделения текста/изображения/файла/объектов, состояние приложения, позиция курсора и прокрутки страницы, просмотренные страницы, положение и размеры окна.&lt;/li&gt;
+  &lt;li&gt;Хранить нужно даже то, что человек явно удалил.&lt;/li&gt;
+  &lt;li&gt;Хранить нужно не только последнюю версию файла, но и предыдущие. Предыдущие версии файла так же ценны.&lt;/li&gt;
+  &lt;li&gt;Для хранения используйте контроль версий, резервное копирование, временные папки, корзину.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-скромность&quot;&gt;3. Скромность&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Нельзя отвлекать человека вещами, которые нужны компьютеру, но не важны для человека.
+Компьютерные проблемы решает компьютер.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;выбором-места-хранения-файла-должен-заниматься-компьютер&quot;&gt;Выбором места хранения файла должен заниматься компьютер&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: загрузка в Firefox.&lt;/strong&gt; Человек хочет скачать файл. Но ему предлагают сделать другие действия. В этот момент, как правило, браузер ждет реакции человека, хотя мог бы уже давно скачать файл.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/firefox-download.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/firefox-download@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: загрузка в Chrome.&lt;/strong&gt; Браузер сразу же загружает файлы, нет никаких запросов. Для этого он использует временную папку Downloads. Если нужно посмотреть файл, то просто кликаешь на него на панели загрузок. Он откроется сразу же или автоматически после скачки. Нет никаких задержек загрузки из-за ожидания человека.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/chrome-download.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/chrome-download@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; не спрашивайте и не ждите действия человека, когда он попросил что-то сделать. Делайте предварительную загрузку. Для временного хранения файлов используйте специальную папку. Если человек нажал “Скачать” случайно, дайте быстро отменить загрузку или удалить файл, если он уже скачался.&lt;/p&gt;
+
+&lt;h3 id=&quot;созданием-резервной-копией-должен-занимать-компьютер-даже-без-первичной-настройки-человеком&quot;&gt;Созданием резервной копией должен занимать компьютер даже без первичной настройки человеком&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: File History из Windows.&lt;/strong&gt; Предварительно нужно самим включить и настроить создание резервных копий. Создание резервных копий – это не цель человека (если только он не занимается таким бизнесом). Если человека всё таки убедили сделать бекап, то ему нужно сделать нетривиальные технические настройки. Доступное место ограничено (маленькие SSD) и не получится бекапить “всё”. Нужно предугадать что бекапить, как часто и на какой срок. И это не так просто. Например, внутри папки с “легкими” документами могут быть “тяжелые” файлы, которые сразу забьют всё место. Или тебе важны частые бекапы тяжёлых &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D1%84%D0%B0%D0%B9%D0%BB&quot;&gt;бинарных&lt;/a&gt; (а-ля PSD) файлов, из которых нельзя сделать “легкие” инкрементальные изменения.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/windows-history.jpg&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/windows-history@2x.jpg 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо. Version history из Dropbox.&lt;/strong&gt; При использовании Dropbox человек совершенно не заботится о резервных копиях. Он даже может не знать, что такое “бекапы”, и что они у него создаются. Часто слышу, что кого-то &lt;a href=&quot;https://twitter.com/search?q=dropbox%20%D1%81%D0%BF%D0%B0%D1%81&quot;&gt;в очередной раз спас Dropbox&lt;/a&gt;. Хорошо с версионированием справляются так же офисные пакеты Google Docs и Office Online, облачные хранилища Google Drive и OneDrive, множество других небольших веб-сервисов.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/dropbox-history@2x.gif&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/dropbox-history@2x.gif 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; в своих приложениях делайте бекапы сразу без предварительной настройки. Иметь версию файла, актуальную неделю назад, такое же базовое требование приложения, как устойчивость к сбоям. Сохраняйте инкрементальные изменения, экономьте место человека. Не используйте бинарные файлы для хранения данных, они сильно увеличивают объем бекапа. Помните, человек вспомнит о бекапе только тогда, когда будет уже поздно. Минимизируйте необходимость настройки со стороны человека. Плохой бекап лучше, чем никакой. Преимуществом в сфере бекапов имеют, конечно, облачные хранилища с их условно неограниченным хранилищем.&lt;/p&gt;
+
+&lt;h3 id=&quot;защитой-и-обслуживанием-компьютера-должен-заниматься-он-сам&quot;&gt;Защитой и обслуживанием компьютера должен заниматься он сам&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: Kaspersky Internet Security.&lt;/strong&gt; Антивирус ставит себя в центр мира. Нужно постоянно обновлять базы. Панель управления выглядит как у космического корабля, много графиков. Показывает, что ты всегда в опасности. А пищание при нахождении вируса невозможно забыть. Некоторые люди, кстати, думают, что писк издают сами вирусы.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/kaspersky-antivirus@2x.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: Windows Defender Antivirus.&lt;/strong&gt; Работает сразу и тихо. Его не замечаешь, он не кричит. Ты про него можешь и не знать. Если есть угроза безопасности, то он спокойно об этом говорит. Т. к. это проблема защищенности компьютера, а не человека.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/windows-antivirus.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/windows-antivirus@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; безопасностью компьютера должен заниматься компьютер. Если найден вредоносный файл, можно показать ненавязчивое уведомление (&lt;em&gt;хорошее решение&lt;/em&gt;). Или понять, что компьютер под угрозой, обновить базу, проверить автоматически весь диск, и по результатам вывести отчет, что “Вы в безопасности” (&lt;em&gt;лучше&lt;/em&gt;). Или тихо нейтрализовать вирусы, помещать неизлечимые файлы в безопасное хранилище (карантин), и только тогда, когда человек пытается их открыть, говорить, что файлы небезопасны, и предлагать открыть предыдущую безопасную версию файла (&lt;em&gt;великолепное решение&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;организацией-закладок-должен-заниматься-компьютер&quot;&gt;Организацией закладок должен заниматься компьютер&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Плохо: Закладки в Chrome.&lt;/strong&gt; При добавлении закладки появляется окно (в загрузках файлов избавились от окна, а тут не смогли). Предлагают ввести имя, хотя оно уже и так есть. Предлагают выбрать папку хранения из сотни, что у меня доступны. Цель закладок — быстро сохранить текущее местонахождение, а не заполнение метаинформации.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/bookmark-chrome.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/bookmark-chrome@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Хорошо: &lt;em&gt;нет примера&lt;/em&gt;.&lt;/strong&gt; Ближе всего к идеалу создания закладок &lt;em&gt;Add to Reading List&lt;/em&gt; в Safari, хотя цель у этой функции совсем другая. Стандартными закладками на iPad непригодны: не удобно сохранять и все равно в итоге ничего не найдешь. На десктопе в Chrome сохраняю закладки перетаскиванием иконки на папку или в начало списка закладок (рядом с кнопкой “Назад” в браузере). Так же можно поставить &lt;a href=&quot;https://chrome.google.com/webstore/detail/sprucemarks/fakeocdnmmmnokabaiflppclocckihoj&quot;&gt;расширение&lt;/a&gt;, чтобы при нажатии на &lt;em&gt;Звездочку&lt;/em&gt; окно сразу закрывалось, а закладка улетала в начала списка.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts_images/2017-08-10-design-basic/bookmark-chromegood.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; srcset=&quot;/assets/posts_images/2017-08-10-design-basic/bookmark-chromegood@2x.png 2x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Вывод:&lt;/strong&gt; Сохранение закладок должно быть мгновенным в 1-клик без запросов. Всё, что требует больше одного клика, уже не может называться закладкой. Категоризация и установка тегов должна быть автоматическая по содержимому страницы. Кроме того, нужно сохранять вспомогательную информацию, которая поможет при последующем поиске: как попал на страницу, что до этого искал, как человек себя вёл на странице, какие страницы так же смотрел. Сейчас поиск по истории у браузеров примерно никакой, проще найти в интернете заново.&lt;/p&gt;
+
+&lt;h3 id=&quot;итого-по-скромности&quot;&gt;Итого по скромности:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Вопросы и уведомления должны касаться только целей человека.&lt;/li&gt;
+  &lt;li&gt;Не путайте цели человека и цели компьютера. Это сложно, но важно.&lt;/li&gt;
+  &lt;li&gt;Считайте, что на вопросы, не касающиеся целей человека, зачастую будут даны вредные и опасные ответы. А в большинстве случаев уведомления будут совсем проигнорированы.&lt;/li&gt;
+  &lt;li&gt;Оценивая качество и удовлетворенность вашего приложения считайте, что все вопросы, необходимые компьютеру, будут проигнорированы или отвечены некорректно. Если приложение спросило: “Куда сохранять бекапы?”, значит приложение не имеет функции хранения резервных файлов. И на странице &lt;em&gt;Features&lt;/em&gt; сайта вашего приложения можно смело вычеркнуть этот пункт.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;общий-итог&quot;&gt;Общий итог&lt;/h2&gt;
+&lt;p&gt;При создании приложений пользуйтесь базовыми принципами проектирования для создания естественного взаимодействия и удовлетворенности от использования. Отзывчивость создаст удобное использование. Благодаря надежности человек получит безопасную систему. В следствии скромности компьютера человек будет полностью погружен в решении своих задач.&lt;/p&gt;</content><author><name>Andrei Voronin</name></author><summary type="html"></summary></entry></feed>
